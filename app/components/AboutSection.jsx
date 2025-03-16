@@ -63,7 +63,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full ">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base md:text-lg">
-          Hello! I'm Muhammad Ahsan Qasim, a passionate Full-Stack Developer with expertise in modern web technologies and backend frameworks. With a solid foundation in programming and a commitment to delivering high-quality solutions, I focus on creating user-centric, scalable, and efficient applications. My goal is to transform complex challenges into innovative digital experiences that make a difference.
+          Hello! I&apos;m Muhammad Ahsan Qasim, a passionate Full-Stack Developer with expertise in modern web technologies and backend frameworks. With a solid foundation in programming and a commitment to delivering high-quality solutions, I focus on creating user-centric, scalable, and efficient applications. My goal is to transform complex challenges into innovative digital experiences that make a difference.
 
 
           </p>
