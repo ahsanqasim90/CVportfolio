@@ -5,8 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 const EmailSection = () => {
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative" id="contact">
-        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-full -left-4 transform -translate-x-1/2 -translate-1/2 "></div>
+    <section
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      id="contact"
+    >
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-full -left-4 transform -translate-x-1/2 -translate-1/2 "></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2 ">Let's Connect</h5>
         <p className="text-[#ADB7BE] md-4 max-w-md">
@@ -16,10 +19,10 @@ const EmailSection = () => {
           to get back to you!
         </p>
         <div className="social flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/ahsanqasim90" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/ahsan-qasim/" target="_blank">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -56,19 +59,26 @@ const EmailSection = () => {
           />
         </div>
         <div className="mb-6">
-            <label
+          <label
             htmlFor="message"
             className="text-white block text-sm mb-2 font-medium"
+          >
+            Message
+          </label>
+          <textarea
+            name="message"
+            id="messgae"
+            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+            placeholder="Let's talk about..."
+          />
+          <div>
+            <button
+              type="submit"
+              className="mt-2 bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
-                Message
-            </label>
-            <textarea name="message" id="messgae"
-             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" 
-             placeholder="Let's talk about..." />
-             <div>
-                <button type="submit"
-                className="mt-2 bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full">Send Message</button>
-             </div>
+              Send Message
+            </button>
+          </div>
         </div>
       </form>
     </section>
