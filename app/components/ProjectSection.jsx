@@ -7,8 +7,9 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Co-Working Space Website",
+    description:
+      "Developed a sleek, high-performance website for a co-working space, emphasizing intuitive navigation, responsive layouts, and an engaging user experience. Built with React to ensure scalability, speed, and seamless functionality across all devices.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,35 +17,37 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "PPC Fly – Marketing Agency",
+    description:
+      "Created a fully responsive and modern digital marketing agency website showcasing services, client testimonials, and conversion-driven design. Built using React.js, Bootstrap, HTML, and CSS with smooth animations powered by Framer Motion to deliver a clean, professional user experience.",
+    video: "/videos/ppc-fly-demo.mp4",
+    imgUrl: "/images/projects/ppc-fly-thumbnail.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/ahsanqasim90/ppc-fly",
+    previewUrl: "https://ppcfly.agency",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Trendy Hub – E-commerce Store",
+    description: "Designed and developed a modern, fully responsive e-commerce store using React and Bootstrap. Features included dynamic product listings, smooth UI/UX, and a clean, scalable codebase.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  // {
+  //   id: 4,
+  //   title: "Food Ordering Application",
+  //   description: "Project 4 description",
+  //   image: "/images/projects/4.png",
+  //   tag: ["All", "Mobile"],
+  //   gitUrl: "/",
+  //   previewUrl: "/",
+  // },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "React Template",
+    description: "Built a responsive React project demonstrating clean, modular, and reusable code with a focus on scalability and maintainability. Follows industry-standard best practices.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -52,8 +55,8 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "IRIS – FBR Web Interface Clone",
+    description:  "Created a responsive and user-friendly front-end clone of the IRIS FBR web portal using HTML, CSS, Bootstrap, and React. Focused on clean layout, accurate design replication, and accessibility.",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -114,7 +117,8 @@ const ProjectsSection = () => {
               key={project.id}
               title={project.title}
               description={project.description}
-              imgUrl={project.image}
+              imgUrl={project.imgUrl || project.image} // ✅ fallback to image if imgUrl not given
+              videoUrl={project.video}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
